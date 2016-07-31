@@ -23,7 +23,7 @@
   <groupId>io.fabric8.quickstarts</groupId>
   <artifactId>springboot-camel-xml</artifactId>
   <version>1.0-SNAPSHOT</version>
-  
+
   <name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel XML</name>
   <description>Shows how to use Camel with Spring Boot with an XML file for routes</description>
 
@@ -31,7 +31,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- maven plugin versions -->
-    <fabric8.maven.plugin.version>3.1.1</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.1.4</fabric8.maven.plugin.version>
 
     <!-- configure the versions you want to use here -->
     <camel.version>2.17.2</camel.version>
