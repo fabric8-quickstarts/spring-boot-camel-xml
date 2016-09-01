@@ -18,15 +18,17 @@ package io.fabric8.quickstarts.camel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-public class Main {
+@ImportResource({"classpath:spring/camel-context.xml"})
+public class Application {
 
     /**
      * A main method to start this Funktion.
      */
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
