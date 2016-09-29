@@ -16,16 +16,17 @@
  */
 package io.fabric8.quickstarts.camel;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Named;
 
 /**
  * A sample transform
  */
-@ComponentScan
+@Component
 @Named("myTransformer")
 public class MyTransformer {
+
     public String transform() {
         // lets return a random string
         StringBuffer buffer = new StringBuffer();
@@ -36,4 +37,5 @@ public class MyTransformer {
         }
         return buffer.toString();
     }
+
 }
