@@ -34,8 +34,7 @@
     <fabric8.maven.plugin.version>3.1.74</fabric8.maven.plugin.version>
 
     <!-- configure the versions you want to use here -->
-    <camel.version>2.18.0</camel.version>
-    <fabric8.version>2.2.168</fabric8.version>
+    <fabric8.version>2.2.169</fabric8.version>
     <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
 
     <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
@@ -44,25 +43,10 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- import fabric8 platform bom first -->
       <dependency>
         <groupId>io.fabric8</groupId>
-        <artifactId>fabric8-project-bom-with-platform-deps</artifactId>
+        <artifactId>fabric8-project-bom-camel-spring-boot</artifactId>
         <version>${fabric8.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring-boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-parent</artifactId>
-        <version>${camel.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
