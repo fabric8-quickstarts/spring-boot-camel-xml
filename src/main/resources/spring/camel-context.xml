@@ -4,11 +4,11 @@
     <!-- You could also define a traditional camel context here -->
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route id="simple-route">
-            <from id="timer" uri="timer:foo?period=2000"/>
-            <transform id="transform">
+            <from id="route-timer" uri="timer:foo?period=2000"/>
+            <transform id="route-transform">
                 <method ref="myTransformer"/>
             </transform>
-            <log id="log" message=">>> ${body}"/>
+            <log id="route-log" message=">>> ${body}"/>
         </route>
     </camelContext>
 </beans>
