@@ -1,11 +1,9 @@
-# Spring-Boot Camel QuickStart
+# Spring-Boot Camel XML QuickStart
 
-This example demonstrates how you can use Apache Camel with Spring Boot
-based on a [fabric8 Java base image](https://github.com/fabric8io/base-images#java-base-images)
+This example demonstrates how to configure Camel routes in Spring Boot via
+a Spring XML configuration file.
 
-The quickstart uses Spring Boot to configure a little application that includes a Camel
-route that triggeres a message every 5th second, and routes the message to a log.
-
+The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
 
 ### Building
 
@@ -57,4 +55,3 @@ You can also use the [fabric8 developer console](http://fabric8.io/guide/console
 ### More details
 
 You can find more details about running this [quickstart](http://fabric8.io/guide/quickstarts/running.html) on the website. This also includes instructions how to change the Docker image user and registry.
-
