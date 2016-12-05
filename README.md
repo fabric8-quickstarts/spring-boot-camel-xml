@@ -5,6 +5,10 @@ a Spring XML configuration file.
 
 The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
 
+All commands below requires one of these:
+- be logged in to the targeted OpenShift instance (using oc login command line tool for instance)
+- configure properties to specify to which OpenShift instance it should connect
+
 ### Building
 
 The example can be built with
