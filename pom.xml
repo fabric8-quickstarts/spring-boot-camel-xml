@@ -38,7 +38,7 @@
     <spring-boot.version>1.4.2.RELEASE</spring-boot.version>
 
     <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
   </properties>
 
   <dependencyManagement>
