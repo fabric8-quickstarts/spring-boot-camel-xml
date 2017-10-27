@@ -37,6 +37,8 @@
     <fabric8.version>2.3.7</fabric8.version>
     <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 
+    <arquillian-cube.version>1.9.0</arquillian-cube.version>
+
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
   </properties>
@@ -81,6 +83,7 @@
     <dependency>
       <groupId>org.arquillian.cube</groupId>
       <artifactId>arquillian-cube-openshift</artifactId>
+      <version>${arquillian-cube.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
