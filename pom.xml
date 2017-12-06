@@ -31,10 +31,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- maven plugin versions -->
-    <fabric8.maven.plugin.version>3.5.28</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.5.31</fabric8.maven.plugin.version>
 
     <!-- configure the versions you want to use here -->
-    <fabric8.version>2.3.2</fabric8.version>
+    <fabric8.version>2.3.7</fabric8.version>
     <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
@@ -55,10 +55,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring-boot-starter</artifactId>
     </dependency>
@@ -78,23 +74,18 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.jboss.arquillian.junit</groupId>
       <artifactId>arquillian-junit-container</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.arquillian.cube</groupId>
+      <artifactId>arquillian-cube-openshift</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>io.fabric8</groupId>
-      <artifactId>fabric8-arquillian</artifactId>
+      <artifactId>kubernetes-assertions</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -119,6 +110,7 @@
         <version>${maven-surefire-plugin.version}</version>
         <inherited>true</inherited>
         <configuration>
+          <argLine>-DenableImageStreamDetection=true</argLine>
           <excludes>
             <exclude>**/*KT.java</exclude>
           </excludes>
