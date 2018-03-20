@@ -29,7 +29,7 @@ All commands below requires one of these:
 - be logged in to the targeted OpenShift instance (using oc login command line tool for instance)
 - configure properties to specify to which OpenShift instance it should connect
 
-If you have a single-node OpenShift cluster, such as Minishift or the Red Hat Container Development Kit, link:http://appdev.openshift.io/docs/minishift-installation.html[installed and running], you can also deploy your booster there. A single-node OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
+If you have a single-node OpenShift cluster, such as Minishift or the Red Hat Container Development Kit, [installed and running](http://appdev.openshift.io/docs/minishift-installation.html), you can also deploy your quickstart there. A single-node OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
 
 To deploy your booster to a running single-node OpenShift cluster:
 
