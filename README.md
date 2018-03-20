@@ -5,10 +5,6 @@ a Spring XML configuration file.
 
 The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
 
-All commands below requires one of these:
-- be logged in to the targeted OpenShift instance (using oc login command line tool for instance)
-- configure properties to specify to which OpenShift instance it should connect
-
 IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on your Single-node OpenShift Cluster 
 
 ### Building
@@ -28,6 +24,10 @@ Build the project:
     mvn spring-boot:run 
 
 ### Running the Quickstart on a Single-node OpenShift Cluster
+
+All commands below requires one of these:
+- be logged in to the targeted OpenShift instance (using oc login command line tool for instance)
+- configure properties to specify to which OpenShift instance it should connect
 
 If you have a single-node OpenShift cluster, such as Minishift or the Red Hat Container Development Kit, link:http://appdev.openshift.io/docs/minishift-installation.html[installed and running], you can also deploy your booster there. A single-node OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
 
