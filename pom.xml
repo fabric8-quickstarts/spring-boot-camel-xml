@@ -38,7 +38,7 @@
       <fmp.version>3.5.37</fmp.version>
   </properties>
 
-    <dependencyManagement>
+  <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -55,7 +55,7 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
