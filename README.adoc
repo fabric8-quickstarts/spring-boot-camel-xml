@@ -1,0 +1,54 @@
+= Spring-Boot Camel XML QuickStart
+
+This example demonstrates how to configure Camel routes in Spring Boot via
+a Spring XML configuration file.
+
+The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
+
+IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernates / OpenShift Cluster 
+
+== Building
+
+The example can be built with
+
+    mvn clean install
+
+=== Running the Quickstart standalone on your machine
+
+You can also run this booster as a standalone project directly:
+
+Obtain the project and enter the project's directory
+Build the project:
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ mvn clean package
+$ mvn spring-boot:run 
+----
+
+=== Running the Quickstart on Kubernetese / OpenShift Cluster
+
+Following steps assume you already have a Kubernates / Openshift environment installed and relative tools like `oc` / `kubectl`.
+ If you have a single-node Kubernetes / OpenShift cluster, such as `Minikube` / `Minishift`, you can also deploy your quickstart there. 
+A single-node Kubernetes / OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
+
+. Log in and create your project / namespace:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ oc login -u developer -p developer
+$ oc new-project MY_PROJECT_NAME
+----
++
+or
++ 
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ kubectl create namespace MY_PROJECT_NAME
+----
+
+. Build and deploy the project to the Kubernetes / OpenShift cluster:
++
+[source,bash,options="nowrap",subs="attributes+"]
+----
+$ mvn clean -DskipTests fabric8:deploy -Popenshift
+----
