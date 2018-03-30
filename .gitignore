@@ -15,4 +15,3 @@ overlays
 .cache
 dependency-reduced-pom.xml
 .vagrant/
-.vscode/
