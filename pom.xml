@@ -33,10 +33,10 @@
 
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
         <camel.version>2.21.0.fuse-000077</camel.version>
-        <fis.version>2.3.7.fuse-000036-redhat-2</fis.version>
+        <fis.version>3.0.11.fuse-000037-redhat-1</fis.version>
 
         <!-- versions of Maven plugins -->
-        <fmp.version>3.5.32.fuse-000040-redhat-2</fmp.version>
+        <fmp.version>3.5.33.fuse-000066-redhat-1</fmp.version>
     </properties>
 
     <dependencyManagement>
