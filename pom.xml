@@ -22,7 +22,7 @@
 
   <groupId>io.fabric8.quickstarts</groupId>
   <artifactId>spring-boot-camel-xml</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0.fuse-000153</version>
 
   <name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel XML</name>
   <description>Spring Boot example running a Camel route defined in XML</description>
@@ -31,11 +31,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
-        <fabric8.version>2.3.7.fuse-000036-redhat-2</fabric8.version>
+        <spring-boot.version>1.5.13.RELEASE</spring-boot.version>
+        <fabric8.version>3.0.11.fuse-000064</fabric8.version>
 
         <!-- versions of Maven plugins -->
-        <fabric8.maven.plugin.version>3.5.32.fuse-000040-redhat-2</fabric8.maven.plugin.version>
+        <fabric8.maven.plugin.version>3.5.33.fuse-000088</fabric8.maven.plugin.version>
     </properties>
 
     <dependencyManagement>
