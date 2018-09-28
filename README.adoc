@@ -5,7 +5,7 @@ a Spring XML configuration file.
 
 The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
 
-IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernates / OpenShift Cluster 
+IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernetes / OpenShift Cluster 
 
 == Building
 
@@ -27,7 +27,7 @@ $ mvn spring-boot:run
 
 === Running the Quickstart on Kubernetese / OpenShift Cluster
 
-Following steps assume you already have a Kubernates / Openshift environment installed and relative tools like `oc` / `kubectl`.
+Following steps assume you already have a Kubernetes / OpenShift environment installed and relative tools like `oc` / `kubectl`.
  If you have a single-node Kubernetes / OpenShift cluster, such as `Minikube` / `Minishift`, you can also deploy your quickstart there. 
 A single-node Kubernetes / OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
 
