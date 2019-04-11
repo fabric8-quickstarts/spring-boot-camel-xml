@@ -3,9 +3,9 @@
 This example demonstrates how to configure Camel routes in Spring Boot via
 a Spring XML configuration file.
 
-The application utilizes the Spring [`@ImportResource`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html) annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
+The application utilizes the Spring http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html[`@ImportResource`] annotation to load a Camel Context definition via a [camel-context.xml](src/main/resources/spring/camel-context.xml) file on the classpath.
 
-IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernetes / OpenShift Cluster 
+IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernetes / OpenShift Cluster
 
 == Building
 
@@ -22,33 +22,81 @@ Build the project:
 [source,bash,options="nowrap",subs="attributes+"]
 ----
 $ mvn clean package
-$ mvn spring-boot:run 
+$ mvn spring-boot:run
 ----
 
 === Running the Quickstart on Kubernetese / OpenShift Cluster
 
 Following steps assume you already have a Kubernetes / OpenShift environment installed and relative tools like `oc` / `kubectl`.
- If you have a single-node Kubernetes / OpenShift cluster, such as `Minikube` / `Minishift`, you can also deploy your quickstart there. 
+ If you have a single-node Kubernetes / OpenShift cluster, such as `Minikube` / `Minishift`, you can also deploy your quickstart there.
 A single-node Kubernetes / OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
 
-. Log in and create your project / namespace:
-+
+Log in and create your project / namespace:
+
 [source,bash,options="nowrap",subs="attributes+"]
 ----
 $ oc login -u developer -p developer
 $ oc new-project MY_PROJECT_NAME
 ----
-+
+
 or
-+ 
+
 [source,bash,options="nowrap",subs="attributes+"]
 ----
 $ kubectl create namespace MY_PROJECT_NAME
 ----
 
-. Build and deploy the project to the Kubernetes / OpenShift cluster:
-+
+Assuming your current shell is connected to Kubernetes or OpenShift so that you can type a command like
+
 [source,bash,options="nowrap",subs="attributes+"]
 ----
-$ mvn clean -DskipTests fabric8:deploy -Popenshift
+kubectl get pods
 ----
+
+or for OpenShift
+
+[source,bash,options="nowrap",subs="attributes+"]
+----
+oc get pods
+----
+
+Then the following command will package your app and run it on Kubernetes:
+
+[source,bash,options="nowrap",subs="attributes+"]
+----
+mvn fabric8:run
+----
+
+To list all the running pods:
+
+[source,bash,options="nowrap",subs="attributes+"]
+----
+oc get pods
+----
+
+Then find the name of the pod that runs this quickstart, and output the logs from the running pods with:
+
+[source,bash,options="nowrap",subs="attributes+"]
+----
+oc logs <name of pod>
+----
+
+You can also use the http://fabric8.io/guide/console.html[fabric8 developer console] to manage the running pods, and view logs and much more.
+
+
+=== Integration Testing
+
+The example includes a https://github.com/fabric8io/fabric8/tree/master/components/fabric8-arquillian[fabric8 arquillian ] Kubernetes Integration Test.
+Once the container image has been built and deployed in Kubernetes, the integration test can be run with:
+
+[source,bash,options="nowrap",subs="attributes+"]
+----
+mvn test -Dtest=*KT
+----
+
+The test is disabled by default and has to be enabled using `-Dtest`. https://fabric8.io/guide/testing.html[Integration Testing] and https://fabric8.io/guide/arquillian.html[Fabric8 Arquillian Extension] provide more information on writing full fledged black box integration tests for Kubernetes.
+
+=== More details
+
+You can find more details about running this http://fabric8.io/guide/quickstarts/running.html[quickstart] on the website. This also includes instructions how to change the Docker image user and registry.
+
