@@ -32,7 +32,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- configure the Fuse version you want to use here -->
-    <fuse.version>7.4.0.fuse-sb2-740006</fuse.version>
+    <fuse.version>7.4.0.fuse-sb2-740006-redhat-00001</fuse.version>
   </properties>
 
   <dependencyManagement>
