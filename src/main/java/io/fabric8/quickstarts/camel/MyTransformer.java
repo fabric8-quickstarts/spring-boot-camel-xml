@@ -32,7 +32,7 @@ public class MyTransformer {
             char letter = (char) ('0' + number);
             buffer.append(letter);
         }
-        return "Yogi"+buffer.toString();
+        return "Yogaraj"+buffer.toString();
     }
 
 }
