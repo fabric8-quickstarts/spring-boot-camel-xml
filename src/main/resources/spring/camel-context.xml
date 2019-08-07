@@ -8,13 +8,13 @@
 
   <!-- Define a traditional camel context here -->
   <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-    <route id="simple-route">
+<!--     <route id="simple-route">
       <from id="route-timer" uri="timer:foo?period=2000"/>
       <transform id="route-transform">
         <method ref="myTransformer"/>
       </transform>
       <log id="route-log" message=">>> ${body}"/>
-    </route>
+    </route> -->
   </camelContext>
 
 </beans>

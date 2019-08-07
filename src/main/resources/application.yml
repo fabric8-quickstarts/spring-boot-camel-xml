@@ -1,0 +1,90 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url:  jdbc:postgresql://localhost:5432/woodpecker
+    username: postgres
+    password: postgres
+  mail:
+    host: localhost
+    port: 9797
+  activemq:
+    brokerUrl: tcp://localhost:61616
+    user: admin
+    password: admin	  
+ 
+
+  logging:
+    file: logs/dev_profile_app.log
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+      file: "%d %-5level [%thread] %logger : %msg%n"
+    level:
+      org.springframework.web: INFO
+      guru.springframework.controllers: DEBUG
+      org.hibernate: WARN  
+
+
+message: in DEV
+mailto: ilink7777777@gmail.com
+mailFrom: ilink7777777@gmail.com
+
+fileRoute: direct:aliendata.json
+fromRoute: kafka:inputTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
+toRoute:  jdbc:dataSource
+errorRoute: kafka:errorTopic?brokers=localhost:9092
+soapRoute:  spring-ws:http://www.dneonline.com/calculator.asmx?webServiceTemplate=#webServiceTemplate&soapAction=http://tempuri.org/Add
+fromJmsRoute: activemq:inputQueue
+toJmsRoute:  log:?level=INFO&showBody=true
+
+
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url:  jdbc:postgresql://localhost:5432/woodpecker
+    username: postgres
+    password: postgres
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ilink7777777
+    password: Welcome$7
+    properties.mail.smtp.auth:  true
+    properties.mail.smtp.starttls.enable: true  
+   
+  logging:
+    file: logs/production_profile_app.log
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+      file: "%d %-5level [%thread] %logger : %msg%n"
+    level:
+      org.springframework.web: INFO
+      guru.springframework.controllers: DEBUG
+      org.hibernate: WARN   
+    
+
+  
+
+  
+
+
+message: in PROD
+mailto: ilink7777777@gmail.com
+mailFrom: ilink7777777@gmail.com
+
+fileRoute: direct:aliendata.json
+fromRoute: kafka:inputTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
+toRoute:  jdbc:dataSource
+errorRoute: kafka:errorTopic?brokers=localhost:9092
+
+---
+
+server:
+  port : 8787
