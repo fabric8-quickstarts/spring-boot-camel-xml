@@ -14,7 +14,7 @@
  * permissions and limitations under the License.
  *
  */
-package io.fabric8.quickstarts.camel;
+package com.ilink;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

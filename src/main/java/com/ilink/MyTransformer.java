@@ -14,7 +14,7 @@
  * permissions and limitations under the License.
  *
  */
-package io.fabric8.quickstarts.camel;
+package com.ilink;
 
 import org.springframework.stereotype.Component;
 
@@ -32,7 +32,7 @@ public class MyTransformer {
             char letter = (char) ('0' + number);
             buffer.append(letter);
         }
-        return "Yogaraj Khanal The Great"+buffer.toString();
+        return "Openshift is fun"+buffer.toString();
     }
 
 }
