@@ -14,7 +14,7 @@ spring:
     host: localhost
     port: 9797
   activemq:
-    brokerUrl: tcp://broker-amq-tcp-yogi0c.b9ad.pro-us-east-1.openshiftapps.com:61616
+    brokerUrl: tcp://0.0.0.0:61616
     user: admin
     password: admin	  
  
