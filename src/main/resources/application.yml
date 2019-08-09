@@ -49,9 +49,9 @@ spring:
   profiles: prod
   datasource:
     driver-class-name: org.postgresql.Driver
-    jdbc-url:  jdbc:postgresql://localhost:5432/woodpecker
-    username: postgres
-    password: postgres
+    jdbc-url:  jdbc:postgresql://postgresql.ilink-pilot.svc/sampledb
+    username: userYXD
+    password: NUky56oWuxjtS8Vg
   mail:
     host: smtp.gmail.com
     port: 587
