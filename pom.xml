@@ -53,10 +53,19 @@
     </dependencyManagement>
 
     <dependencies>
+    
+    	<!-- CAMEL -->
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-spring-boot-starter</artifactId>
         </dependency>
+        
+        <dependency>
+			    <groupId>org.apache.camel</groupId>
+			    <artifactId>camel-gson</artifactId>
+		</dependency>
+	
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -76,6 +85,36 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         
+        	<!-- Email -->
+
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-mail</artifactId>
+		 </dependency>
+		 
+		 <dependency>
+   			 <groupId>org.springframework</groupId>
+   			 <artifactId>spring-context-support</artifactId>  
+		</dependency>
+		 
+		 <!-- DB -->
+		 
+		 <dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		
+	   <dependency>
+      		<groupId>org.springframework.boot</groupId>
+      		<artifactId>spring-boot-starter-jdbc</artifactId>
+  	 </dependency>
+  	 
+  	 <dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-jdbc</artifactId>
+	</dependency>
+        
+        
         
         <!-- ActiveMQ -->
 		
@@ -94,6 +133,38 @@
 		    <groupId>org.apache.activemq</groupId>
 		    <artifactId>activemq-kahadb-store</artifactId>
 		</dependency>
+		
+		       <!-- Kafka -->
+        <dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-kafka-starter</artifactId>
+		</dependency>
+		
+			<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-kafka</artifactId>
+		</dependency>
+		
+        <dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+			
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		
+			
+	<!-- lombok -->
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <scope>provided</scope>
+	</dependency>
+	
 		        
         
 

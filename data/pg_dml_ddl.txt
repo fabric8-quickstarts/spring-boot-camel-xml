@@ -1,0 +1,32 @@
+select * from alien
+
+INSERT INTO alien(alien_id, first_name,last_name,address,email) VALUES (1026,'JAmes','Tim','Hear In UK','whatsup@gmail.com')
+
+
+
+CREATE TABLE alien(
+   alien_id serial PRIMARY KEY,
+   first_name VARCHAR (50) UNIQUE NOT NULL,
+   last_name VARCHAR (50) UNIQUE NOT NULL,
+   address VARCHAR (355) UNIQUE NOT NULL,
+   email VARCHAR (355) UNIQUE NOT NULL,
+   created_on TIMESTAMP NOT NULL,
+   last_login TIMESTAMP
+);
+
+alter table alien drop column created_on;
+alter table alien drop column last_login;
+
+
+INSERT INTO alien(alien_id, first_name,last_name,address,email) VALUES (1000,'Chocks','Sch','123 Main St','ilink777777@gmail.com')
+
+
+{"widget":{"transactionType":"ADD", "alien_id":1000, "firstName":"Chocks", "lastName":"Sch","address":"123 Main St","email":"ilink777777@gmail.com"}
+{"transactionType":"ADD", "alien_id":1001, "firstName":"Mathi", "lastName":"Musth","address":"123 Main St","email":"ilink777777@gmail.com"}
+{"transactionType":"UPDATE", "alien_id":1001, "firstName":"Mathi", "lastName":"Musth","address":"123 Main St","email":"ilink777777@gmail.com"}
+{"transactionType":"DELETE", "alien_id":"1001", "firstName":"Mathi", "lastName":"Musth","address":"123 Main St","email":"ilink777777@gmail.com"}
+
+
+{"transactionType":"DELETE", "alien_id":1001, "firstName":"Mathi", "lastName":"Musth","address":"123 Main St","email":"ilink777777@gmail.com"}
+{"transactionType":"ADD", "alien_id":1000, "firstName":"Chocks", "lastName":"Sch","address":"123 Main St","email":"ilink777777@gmail.com"}}
+
