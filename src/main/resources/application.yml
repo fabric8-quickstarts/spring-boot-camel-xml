@@ -12,12 +12,12 @@ spring:
     username: ilinkuser7
     password: ilinkuser7pass
   mail:
-    host: localhost
-    port: 9797
-  activemq:
-    brokerUrl: vm://ilink-broker-1-amq-1-mtv47:61616
-    user: admin
-    password: admin	  
+    host: smtp.gmail.com
+    port: 587
+    username: ilink7777777
+    password: Welcome$7
+    properties.mail.smtp.auth:  true
+    properties.mail.smtp.starttls.enable: true  
  
 
   logging:
