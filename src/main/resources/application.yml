@@ -8,9 +8,9 @@ spring:
   profiles: dev
   datasource:
     driver-class-name: org.postgresql.Driver
-    jdbc-url:  jdbc:postgresql://localhost:5432/woodpecker
-    username: postgres
-    password: postgres
+    jdbc-url:  jdbc:postgresql://localhost:5432/ilinkdb
+    username: ilinkuser7
+    password: ilinkuser7pass
   mail:
     host: localhost
     port: 9797
