@@ -4,15 +4,7 @@ INSERT INTO alien(alien_id, first_name,last_name,address,email) VALUES (1026,'JA
 
 
 
-CREATE TABLE alien(
-   alien_id serial PRIMARY KEY,
-   first_name VARCHAR (50) UNIQUE NOT NULL,
-   last_name VARCHAR (50) UNIQUE NOT NULL,
-   address VARCHAR (355) UNIQUE NOT NULL,
-   email VARCHAR (355) UNIQUE NOT NULL,
-   created_on TIMESTAMP NOT NULL,
-   last_login TIMESTAMP
-);
+CREATE TABLE alien( alien_id serial PRIMARY KEY,first_name VARCHAR (50) UNIQUE NOT NULL,last_name VARCHAR (50) UNIQUE NOT NULL,address VARCHAR (355) UNIQUE NOT NULL,email VARCHAR (355) UNIQUE NOT NULL,created_on TIMESTAMP NOT NULL,last_login TIMESTAMP);
 
 alter table alien drop column created_on;
 alter table alien drop column last_login;
@@ -29,4 +21,9 @@ INSERT INTO alien(alien_id, first_name,last_name,address,email) VALUES (1000,'Ch
 
 {"transactionType":"DELETE", "alien_id":1001, "firstName":"Mathi", "lastName":"Musth","address":"123 Main St","email":"ilink777777@gmail.com"}
 {"transactionType":"ADD", "alien_id":1000, "firstName":"Chocks", "lastName":"Sch","address":"123 Main St","email":"ilink777777@gmail.com"}}
+
+
+Pod treminal:
+psql -d ilinkdb -U ilinkuser7 -h postgresql.ilink-pilot.svc
+SELECT * FROM pg_catalog.pg_tables;
 
