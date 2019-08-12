@@ -12,12 +12,19 @@ spring:
     username: ilinkuser7
     password: ilinkuser7pass
   mail:
+    default-encoding: UTF-8
     host: smtp.gmail.com
-    port: 587
     username: ilink7777777
     password: Welcome$7
-    properties.mail.smtp.auth:  true
-    properties.mail.smtp.starttls.enable: true  
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
  
 
   logging:
