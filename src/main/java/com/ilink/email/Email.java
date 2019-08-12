@@ -25,8 +25,8 @@ public class Email implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
 
-        Exception e = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
-        String messageBody = "Exception happened in the route and the exception is  " + e.getMessage();
+       // Exception e = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
+       // String messageBody = "Exception happened in the route and the exception is  " + e.getMessage();
 		  MimeMessage messageMime =  emailSender.createMimeMessage();
 		  MimeMessageHelper helper = new
 		  MimeMessageHelper((javax.mail.internet.MimeMessage) messageMime, true);
@@ -35,7 +35,7 @@ public class Email implements Processor {
 		  //helper.setSubject("Exception in Camel Route with data attachement encrypted "
 		  //); 
 		  helper.setSubject("User Data persited in DB please see attached encrypted data ");
-		  helper.setText(messageBody);
+		  helper.setText("Hello Yogi");
 		  helper.addAttachment("myattachement-SpringFileAttached",new File("/Users/yogarajkhanal/iyogi/README.md"));
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
 		 

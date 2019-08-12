@@ -2,6 +2,61 @@
 spring:
   profiles:
     active: dev
+    
+---
+spring:
+  profiles: local
+  activemq:
+    brokerUrl: tcp://localhost:61616
+    user: admin
+    password: admin	  
+    pool:
+      enabled: true
+      max-connections: 5  
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/woodpecker
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: ilink7777777
+    password: Welcome$7
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+ 
+
+  logging:
+    file: logs/dev_profile_app.log
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+      file: "%d %-5level [%thread] %logger : %msg%n"
+    level:
+      org.springframework.web: INFO
+      guru.springframework.controllers: DEBUG
+      org.hibernate: WARN  
+
+
+message: in LOCAL
+mailto: ilink7777777@gmail.com
+mailFrom: ilink7777777@gmail.com
+
+fileRoute: direct:aliendata.json
+fromKafkaRoute: kafka:inputTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
+toDbRoute:  jdbc:dataSource
+errorKafkaRoute: kafka:errorTopic?brokers=localhost:9092
+soapRoute:  spring-ws:http://www.dneonline.com/calculator.asmx?webServiceTemplate=#webServiceTemplate&soapAction=http://tempuri.org/Add
+fromJmsRoute: activemq:inputQueue
+toJmsRoute:  log:?level=INFO&showBody=true    
 
 ---
 spring:
