@@ -70,9 +70,9 @@ spring:
       max-connections: 5  
   datasource:
     platform: postgres
-    url: jdbc:postgresql://postgresql:5432/ilinkdb
-    username: ilinkuser7
-    password: ilinkuser7pass
+    url: jdbc:postgresql://${POSTGRESQL_SERVICE_HOST}:${POSTGRESQL_SERVICE_POR}/${POSTGRESQL_DATABASE}
+    username: ${POSTGRESQL_USER}
+    password: ${POSTGRESQL_PASSWORD}
     driverClassName: org.postgresql.Driver
   mail:
     default-encoding: UTF-8
