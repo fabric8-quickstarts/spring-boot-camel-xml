@@ -1,4 +1,5 @@
-= Spring-Boot Camel XML QuickStart
+--- Email to gmail
+https://myaccount.google.com/lesssecureapps= Spring-Boot Camel XML QuickStart
 
 This example demonstrates how to configure Camel routes in Spring Boot via
 a Spring XML configuration file.
@@ -95,4 +96,5 @@ mvn test -Dtest=*KT
 
 The test is disabled by default and has to be enabled using `-Dtest`. https://fabric8.io/guide/testing.html[Integration Testing] and https://fabric8.io/guide/arquillian.html[Fabric8 Arquillian Extension] provide more information on writing full fledged black box integration tests for Kubernetes.
 
---- This is a test. 
+--- Email to gmail
+https://myaccount.google.com/lesssecureapps
