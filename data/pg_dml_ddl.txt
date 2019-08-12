@@ -24,6 +24,8 @@ INSERT INTO alien(alien_id, first_name,last_name,address,email) VALUES (1000,'Ch
 
 
 Pod treminal:
-psql -d ilinkdb -U ilinkuser7 -h postgresql.ilink-pilot.svc
+psql -d ilinkdb -U ilinkuser7 -h 172.30.76.171 -p 5432
 SELECT * FROM pg_catalog.pg_tables;
+
+env | grep POSTGRES
 

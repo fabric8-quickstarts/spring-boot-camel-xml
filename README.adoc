@@ -102,3 +102,7 @@ https://myaccount.google.com/lesssecureapps
 AMQ:
 Use VM  broker (vm://broker-amq-1-zxrtj:61616)
 Put AMQ user name password on User preference icon on top that you see after clicking java console to view queue
+
+DB:
+env | grep POSTGRES
+
