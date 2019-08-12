@@ -32,8 +32,10 @@ public class Email implements Processor {
 		  MimeMessageHelper((javax.mail.internet.MimeMessage) messageMime, true);
 		  helper.setFrom(environment.getProperty("mailFrom"));
 		  helper.setTo(environment.getProperty("mailto"));
-		  helper.setSubject("Exception in Camel Route with data attachement encrypted "
-		  ); helper.setText(messageBody);
+		  //helper.setSubject("Exception in Camel Route with data attachement encrypted "
+		  //); 
+		  helper.setSubject("User Data persited in DB please see attached encrypted data ");
+		  helper.setText(messageBody);
 		  helper.addAttachment("myattachement-SpringFileAttached",new File("/Users/yogarajkhanal/iyogi/README.md"));
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
 		 
