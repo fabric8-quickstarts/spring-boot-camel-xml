@@ -70,7 +70,7 @@ spring:
       max-connections: 5  
   datasource:
     platform: postgres
-    url: jdbc:postgresql://postgresql.ilink-pilot.svc/ilinkdb
+    url: jdbc:postgresql://postgresql:5432/ilinkdb
     username: ilinkuser7
     password: ilinkuser7pass
     driverClassName: org.postgresql.Driver

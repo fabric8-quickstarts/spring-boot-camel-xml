@@ -23,13 +23,13 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-public class YogiSpringBoot {
+public class ILinkPilotBoot {
 
     /**
      * A main method to start this application.
      */
     public static void main(String[] args) {
-        SpringApplication.run(YogiSpringBoot.class, args);
+        SpringApplication.run(ILinkPilotBoot.class, args);
     }
 
 }
