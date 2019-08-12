@@ -52,16 +52,16 @@ public class KafkaRoute extends RouteBuilder{
 
         onException(DataException.class,RuntimeException.class).log(LoggingLevel.ERROR, "DataException in the route ${body}")
         .process(mailProcessor)
-        .to("{{errorRoute}}");
+        .to("{{errorKafkaRoute}}");
 
 
-		from("{{fromRoute}}")
+		from("{{fromKafkaRoute}}")
 		            .log("Current Environment is "+ environment.getProperty("message"))
 		            .unmarshal(alien)
 		            .log("From Kafka-----------> ${body}")
 		            .process(validateDataProcessor)
 		            .process(dmlCrud)
-		        .to("{{toRoute}}");
+		        .to("{{toDbRoute}}");
 		
 		}
 		

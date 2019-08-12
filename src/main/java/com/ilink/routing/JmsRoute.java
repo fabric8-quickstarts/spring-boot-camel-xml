@@ -44,8 +44,8 @@ public class JmsRoute extends RouteBuilder{
 	        from("{{fromJmsRoute}}").startupOrder(1)
 	                    .log("Read Message from activemQ ${body}")
 	                    
-	                .to("{{toJmsRoute}}");
-	                    //.to("{{fromRoute}}");
+	                //.to("{{toJmsRoute}}");
+	                    .to("{{fromKafkaRoute}}");
 	                    
 
 	        }

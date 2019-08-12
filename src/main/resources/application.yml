@@ -6,11 +6,19 @@ spring:
 ---
 spring:
   profiles: dev
+  activemq:
+    brokerUrl: tcp://localhost:61616
+    user: admin
+    password: admin	 
+    pool:
+      enabled: true
+      max-connections: 5  
   datasource:
-    driver-class-name: org.postgresql.Driver
-    jdbc-url:  jdbc:postgresql://postgresql.ilink-pilot.svc:5432/ilinkdb
-    username: ilinkuser7
-    password: ilinkuser7pass
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/woodpecker
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
   mail:
     default-encoding: UTF-8
     host: smtp.gmail.com
@@ -43,9 +51,9 @@ mailto: ilink7777777@gmail.com
 mailFrom: ilink7777777@gmail.com
 
 fileRoute: direct:aliendata.json
-fromRoute: kafka:inputTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
-toRoute:  jdbc:dataSource
-errorRoute: kafka:errorTopic?brokers=localhost:9092
+fromKafkaRoute: kafka:inputTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
+toDbRoute:  jdbc:dataSource
+errorKafkaRoute: kafka:errorTopic?brokers=localhost:9092
 soapRoute:  spring-ws:http://www.dneonline.com/calculator.asmx?webServiceTemplate=#webServiceTemplate&soapAction=http://tempuri.org/Add
 fromJmsRoute: activemq:inputQueue
 toJmsRoute:  log:?level=INFO&showBody=true
