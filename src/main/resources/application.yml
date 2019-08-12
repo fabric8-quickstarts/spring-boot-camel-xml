@@ -15,9 +15,9 @@ spring:
       max-connections: 5  
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/ilinkdb
+    url: jdbc:postgresql://postgresql.ilink-pilot.svc/ilinkdb
     username: ilinkuser7
-    password: ilinkuser7
+    password: ilinkuser7pass
     driverClassName: org.postgresql.Driver
   mail:
     default-encoding: UTF-8
