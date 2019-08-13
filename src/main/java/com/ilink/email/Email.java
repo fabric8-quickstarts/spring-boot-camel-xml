@@ -34,12 +34,12 @@ public class Email implements Processor {
 		  helper.setTo(environment.getProperty("mailto"));
 		  //helper.setSubject("Exception in Camel Route with data attachement encrypted "
 		  //); 
-		  File file = new File(
-					getClass().getClassLoader().getResource("application.yml").getFile()
-				);
+//		  File file = new File(
+//					getClass().getClassLoader().getResource("application.yml").getFile()
+//				);
 		  helper.setSubject("User Data persited in DB please see attached encrypted data ");
 		  helper.setText("Hello Yogi");
-		  helper.addAttachment("myattachement-SpringFileAttached",file);
+		 // helper.addAttachment("myattachement-SpringFileAttached",file);
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
 		 
 
