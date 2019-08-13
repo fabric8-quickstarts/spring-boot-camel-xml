@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import com.ilink.domain.Alien;
 import com.ilink.email.Email;
-import com.ilink.exception.DataException;
 import com.ilink.persistance.DataMassager;
 import com.ilink.persistance.DmlCrud;
 

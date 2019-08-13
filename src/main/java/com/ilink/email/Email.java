@@ -6,14 +6,11 @@ import javax.mail.internet.MimeMessage;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
-import org.apache.camel.component.gson.GsonDataFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
-
-import com.ilink.domain.Alien;
 
 
 @Component
@@ -37,10 +34,12 @@ public class Email implements Processor {
 		  helper.setTo(environment.getProperty("mailto"));
 		  //helper.setSubject("Exception in Camel Route with data attachement encrypted "
 		  //); 
+		  File file = new File(
+					getClass().getClassLoader().getResource("application.yml").getFile()
+				);
 		  helper.setSubject("User Data persited in DB please see attached encrypted data ");
 		  helper.setText("Hello Yogi");
-		  GsonDataFormat alien = new GsonDataFormat(Alien.class);
-		  helper.addAttachment("myattachement-SpringFileAttached",new File(alien.toString()));
+		  helper.addAttachment("myattachement-SpringFileAttached",file);
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
 		 
 
