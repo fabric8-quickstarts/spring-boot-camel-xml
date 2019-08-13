@@ -62,7 +62,7 @@ toJmsRoute:  log:?level=INFO&showBody=true
 spring:
   profiles: dev
   activemq:
-    brokerUrl: vm://broker-amq-1-b6p6n:61616
+    brokerUrl: tcp://172.30.158.231:61616
     user: ilink
     password: ilink01	  
     pool:
@@ -70,7 +70,7 @@ spring:
       max-connections: 5  
   datasource:
     platform: postgres
-    url: jdbc:postgresql://172.30.76.171:5432/ilinkdb
+    url: jdbc:postgresql://172.30.100.149:5432/ilinkdb
     username: ilinkuser7
     password: ilinkuser7pass
     driverClassName: org.postgresql.Driver
