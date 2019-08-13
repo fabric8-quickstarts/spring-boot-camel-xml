@@ -60,12 +60,13 @@ public class JmsRoute extends RouteBuilder{
 	        			 .unmarshal(alien)
 	                    .log("Read Message from activemQ ${body}")
 	                    .process(validateDataProcessor)
-	                    .process(mailProcessor)
-	                    .log("After sending email")
+	                    .log("After validateDataProcessor of DB")
 	                    .process(dmlCrud)
-	                    .log("After inserting")
+	                    .log("After DmlCrud")	                  	                                      
 	                    .to("{{toDbRoute}}")
-	                    .log("After DB insert")
+	                    .log("After toDbRoute")	 
+	                    .process(mailProcessor)
+	                    .log("After sending email")	 
 	                    ;
 	        
 	                //.to("{{toJmsRoute}}");
