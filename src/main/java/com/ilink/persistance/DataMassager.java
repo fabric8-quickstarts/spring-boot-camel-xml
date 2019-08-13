@@ -19,11 +19,11 @@ public class DataMassager implements Processor{
 		Alien alien= (Alien)	exchange.getIn().getBody()	;
 	
 	 System.out.println("DataMassager--->"+alien);
-	 
-	 if(ObjectUtils.isEmpty(alien.getAlien_id())){
-		 throw new DataException("Alien ID is null for " + alien.getFirstName());
-     }
-	
+//	 
+//	 if(ObjectUtils.isEmpty(alien.getAlien_id())){
+//		 throw new DataException("Alien ID is null for " + alien.getFirstName());
+//     }
+//	
 	}
 
 }
