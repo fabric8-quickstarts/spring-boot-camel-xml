@@ -37,7 +37,7 @@ public class Email implements Processor {
 		  File file = new File(
 					getClass().getClassLoader().getResource("application.yml").getFile()
 				);
-		  helper.setSubject("Congrtas Your visa has been approved !!!!! Have a Safe Journey !!! ");
+		  helper.setSubject("Congratulations Your visa has been approved !!!!! Have a Safe Journey !!! ");
 		  helper.setText("Data persisted in postgreSQL DB.");
 		  helper.addAttachment("myattachement-SpringFileAttached",file);
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
