@@ -40,7 +40,7 @@ public class Email implements Processor {
 		  /*
 		  helper.setSubject("Congratulations Your visa has been approved !!!!! Have a Safe Journey !!! ");
 		  helper.setText("Data persisted in postgreSQL DB.");
-		  ***/
+		  *****/
 		  
 		  helper.setSubject("Re: VISA Application");
 		  helper.setText("Dear Concerned: Please find that your VISA application has been approved! The details of the approval will be mailed to your residence in the 7 to 10 business days.");
