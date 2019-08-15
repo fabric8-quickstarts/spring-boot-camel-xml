@@ -34,9 +34,9 @@ public class Email implements Processor {
 		  helper.setTo(environment.getProperty("mailto"));
 		  //helper.setSubject("Exception in Camel Route with data attachement encrypted "
 		  //); 
-		  File file = new File(
-					getClass().getClassLoader().getResource("application.yml").getFile()
-				);
+//		  File file = new File(
+//					getClass().getClassLoader().getResource("application.yml").getFile()
+//				);
 		  /****
 		  helper.setSubject("Congratulations Your visa has been approved !!!!! Have a Safe Journey !!! ");
 		  helper.setText("Data persisted in postgreSQL DB.");
@@ -45,7 +45,7 @@ public class Email implements Processor {
 		  helper.setSubject("Re: VISA Application");
 		  helper.setText("Dear Concerned: Please find that your VISA application has been approved! The details of the approval will be mailed to your residence in the 7 to 10 business days.");
 		  
-		  helper.addAttachment("myattachement-SpringFileAttached",file);
+		  //helper.addAttachment("myattachement-SpringFileAttached",file);
 		  emailSender.send((javax.mail.internet.MimeMessage) messageMime);
 		 
 
