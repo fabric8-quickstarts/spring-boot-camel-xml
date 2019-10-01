@@ -110,6 +110,7 @@
                     <plugin>
                         <groupId>org.jboss.redhat-fuse</groupId>
                         <artifactId>fabric8-maven-plugin</artifactId>
+                        <version>${fuse.bom.version}</version>
                         <configuration>
                             <enricher>
                                 <excludes>
