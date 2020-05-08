@@ -89,6 +89,7 @@
             <plugin>
                 <groupId>org.jboss.redhat-fuse</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${fuse.bom.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -96,7 +97,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <version>${fuse.bom.version}</version>
             </plugin>
         </plugins>
     </build>
