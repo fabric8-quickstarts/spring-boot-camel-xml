@@ -3,7 +3,7 @@
 This example demonstrates how to configure Camel routes in Spring Boot via
 a Spring XML configuration file.
 
-The application utilizes the Spring http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html[`@ImportResource`] annotation to load a Camel Context definition via a _src/main/resources/spring/camel-context.xml_ file on the classpath.
+The application utilizes the Spring https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ImportResource.html[`@ImportResource`] annotation to load a Camel Context definition via a _src/main/resources/spring/camel-context.xml_ file on the classpath.
 
 IMPORTANT: This quickstart can run in 2 modes: standalone on your machine and on Kubernetes / OpenShift Cluster
 
@@ -16,7 +16,7 @@ You can run this quickstart in the following modes:
 
 The most effective way to run this quickstart is to deploy and run the project on OpenShift.
 
-For more details about running this quickstart on a single-node OpenShift cluster, CI/CD deployments, as well as the rest of the runtime, see the link:http://appdev.openshift.io/docs/spring-boot-runtime.html[Spring Boot Runtime Guide].
+For more details about running this quickstart on a single-node OpenShift cluster, CI/CD deployments, as well as the rest of the runtime, see the link:https://appdev.openshift.io/docs/spring-boot-runtime.html[Spring Boot Runtime Guide].
 
 == Running the Quickstart on a single-node Kubernetes/OpenShift cluster
 
@@ -26,7 +26,7 @@ If you run it in an environment where those images are not preinstalled follow t
 
 A single-node Kubernetes/OpenShift cluster provides you with access to a cloud environment that is similar to a production environment.
 
-If you have a single-node Kubernetes/OpenShift cluster, such as Minishift or the Red Hat Container Development Kit, link:http://appdev.openshift.io/docs/minishift-installation.html[installed and running], you can deploy your quickstart there.
+If you have a single-node Kubernetes/OpenShift cluster, such as Minishift or the Red Hat Container Development Kit, link:https://appdev.openshift.io/docs/minishift-installation.html[installed and running], you can deploy your quickstart there.
 
 
 . Log in to your OpenShift cluster:
